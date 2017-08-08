@@ -1,0 +1,90 @@
+@import "./variables.less";
+
+.app-thread {
+    position: relative;
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style-type: none;
+        }
+    }
+    .post-user {
+        margin: 10px;
+        font-size: @font-xs;
+        border-bottom: 2px solid #eee;
+        height: 30px;
+        padding: 10px 0;
+    }
+    .ttext {
+       margin: 10px; 
+       color: @grey-color;
+       font-size: @font-xs;
+    }
+  .avatar {
+        height: 28px;
+        float: left;
+        margin-right: 10px;
+  }
+    .adetails {
+         float: left;
+         font-size: @font-xs - 1;
+         color: @grey-color;
+    }
+    .uname {
+        color: @fb-blue;
+        font-weight: bold;
+        font-size: @font-xs - 1;
+    }
+    .tuname {
+        margin-bottom: 3px;
+    }
+    .post-btns {
+        background-color: @fb-bg;
+        padding: 7px 15px;;
+        font-size: @font-xs - 1;
+    }
+    .cmmnt-btn {
+        color: @fb-blue;
+        cursor: pointer;
+    }
+}
+
+.comments {
+    width: 100%;
+    min-height: 30px;
+    font-size: @font-xs - 1;
+    .comment {
+        width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 10px;
+        line-height: 15px;
+        color: @grey-color;
+        background-color: @fb-bg;
+        margin: 2px 0;
+        .comment {
+            padding: 10px 0;
+            margin: 0;
+        }
+    }
+    .comment-avatar {
+        height: 28px;
+        float: left;
+        margin-right: 10px;
+    }
+    .comment-section {
+        width: ~"calc(100% - 39px)";
+       float: left;
+    }
+}
+.comment-box {
+    width: 100%;
+    position: absolute;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: rgba(241, 241, 241, 0.62);
+    bottom: -138px;
+    z-index: 999;
+}

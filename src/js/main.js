@@ -1,25 +1,11 @@
 import Vue from 'vue'
-import Clientmain from '../../templates/client.vue'
-import Gcmenu from '../../templates/menu.vue'
-import Gcheatmap from '../../templates/heatmap.vue'
-import Gcduplicate from '../../templates/duplicateclicks.vue'
-import Gcerrorlist from '../../templates/errorlist.vue'
-import Gcerrorview from '../../templates/errortrace.vue'
-import Gcperformance from '../../templates/performance.vue'
+import App from '../templates/app.vue'
+import Thread from '../templates/thread.vue'
 
-Vue.component('clientmain', Clientmain);
-Vue.component('gcmenu', Gcmenu);
-Vue.component('gcheatmap', Gcheatmap);
-Vue.component('gcduplicate', Gcduplicate);
-Vue.component('gcerrorlist', Gcerrorlist);
-Vue.component('gcerrorview', Gcerrorview);
-Vue.component('gcperformance', Gcperformance);
-
-$("body").append(`<div id='clientmain'> 
-                    <clientmain></clientmain>
-                 </div>`);
+Vue.component('app', App);
+Vue.component('thread', Thread);
 
 new Vue({
-    el: '#clientmain'
+    el: '#main'
 })
 

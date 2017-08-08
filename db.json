@@ -1,3 +1,33 @@
 {
-  "errors": []
+  "users": [
+    {
+      "uname": "Abhijit Kumar",
+      "uid": "001",
+      "pic": "/static/user1.png"
+    },
+    {
+      "uname": "Santhosh",
+      "uid": "002",
+      "pic": "user2.png"
+    }
+  ],
+  "thread": {
+    "text": "Hello this is sample post",
+    "uid": "001",
+    "time": "sfsfsafs",
+    "comments": [
+      {
+        "text": "aaaaaa",
+        "uid": "001",
+        "time": "sfsfsafs",
+        "replies": [
+          {
+            "text": "aaaaaa",
+            "uid": "002",
+            "time": "sfsfsafs",
+          }
+        ]
+      }
+    ]
+  }
 }

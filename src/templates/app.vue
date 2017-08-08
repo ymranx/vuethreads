@@ -1,5 +1,6 @@
 <template>
-  <div class="">  
+  <div class="app-screen">  
+    <thread> </thread>
   </div>
 </template>
 

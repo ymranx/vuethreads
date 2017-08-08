@@ -7,7 +7,7 @@ var webpack = require('webpack');
 module.exports = {
   // This is the "main" file which should include all other modules
   entry: {
-    "vuecomments": './src/js/app.js'
+    "vuecomments": './src/js/main.js'
   },
   // Where should the compiled file go?
   output: {
