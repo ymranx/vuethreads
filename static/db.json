@@ -8,7 +8,7 @@
     {
       "uname": "Santhosh",
       "uid": "002",
-      "pic": "user2.png"
+      "pic": "/static/user2.png"
     }
   ],
   "thread": {
@@ -17,14 +17,16 @@
     "time": "sfsfsafs",
     "comments": [
       {
-        "text": "aaaaaa",
+        "id": "1",
+        "text": "Hi Whos there?",
         "uid": "001",
         "time": "sfsfsafs",
         "replies": [
           {
-            "text": "aaaaaa",
+            "id": "2",
+            "text": "Hello I am santhosh",
             "uid": "002",
-            "time": "sfsfsafs",
+            "time": "sfsfsafs"
           }
         ]
       }

@@ -1,6 +1,6 @@
 <template>
   <div class="app-screen">  
-    <thread> </thread>
+    <thread :json="data"> </thread>
   </div>
 </template>
 
