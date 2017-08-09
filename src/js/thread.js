@@ -1,8 +1,10 @@
 var users = {};
+var repId = null;
 
 export default {
     data: function () {
         return {
+            showCommentBox: false
         }
     },
     props: ['json'],
@@ -37,23 +39,51 @@ export default {
         },
 
         openReplyBox: function (repid) {
-            var reply = {
-                "id": Math.round(Math.random() * 2000),
-                "text": "Hello I am santhosh 3",
-                "uid": "002",
-                "time": Date.parse(new Date())
-            }
-            if (repid) {
-                var comm = this.getCommentById(repid);
-                comm.replies.push(reply);
-            } else {
-                reply.replies = [];
-                this.json.thread.comments.push(reply);
-            }
+            // var reply = {
+            //     "id": Math.round(Math.random() * 2000),
+            //     "text": "Hello I am santhosh 3",
+            //     "uid": "002",
+            //     "time": Date.parse(new Date())
+            // }
+            // if (repid) {
+            //     var comm = this.getCommentById(repid);
+            //     comm.replies.push(reply);
+            // } else {
+            //     reply.replies = [];
+            //     this.json.thread.comments.push(reply);
+            // }
+            repId = repid;
+            this.showCommentBox = true;
+            this.$nextTick(() => {
+                $("#commentInput").focus();
+            })
 
         },
 
+        postComment() {
+            var ctext = $("#commentInput").val();
+            if (ctext) {
+                var reply = {
+                    "id": Math.round(Math.random() * 2000),
+                    "text": ctext,
+                    "uid": "002",
+                    "time": Date.parse(new Date())
+                }
+                if (repId) {
+                    var comm = this.getCommentById(repId);
+                    comm.replies.push(reply);
+                } else {
+                    reply.replies = [];
+                    this.json.thread.comments.push(reply);
+                }
+                this.showCommentBox = false;
+            }
+        },
+        closeCommentBox() {
+            this.showCommentBox = false;    
+        },
         btnClick: function (el, ev) {
+            $("#commentInput").val("");
             console.log(el);
         }
     }

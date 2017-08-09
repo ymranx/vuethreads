@@ -40,11 +40,13 @@
         </div>
       </li>
     </ul>
-    <div class="comment-box">
-      <span> </span>
-      <input type="text" class="input-text"/>
-      <i class="fa fa-paper-plane-o icon" aria-hidden="true"></i>
-      <i class="fa fa-times-circle icon" aria-hidden="true"></i>
+    <div class="comment-box" v-if="showCommentBox">
+      <span class="input-text">
+        <input type="text" id="commentInput" class="" placeholder="Type comment and press 'Enter'"
+               v-on:keyup.enter="postComment"/>
+        <i class="fa fa-paper-plane-o icon" aria-hidden="true"></i>
+      </span>
+      <i class="fa fa-times-circle icon close-commentbox" v-on:click="closeCommentBox" aria-hidden="true"></i>
     </div>
   </div>
 </template>

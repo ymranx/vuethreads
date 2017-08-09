@@ -84,25 +84,50 @@
         width: ~"calc(100% - 39px)";
        float: left;
     }
+   
 }
+ ::-webkit-scrollbar {
+        height: 12px;
+        width: 5px;
+        background: #eee;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    ::-webkit-scrollbar-corner {
+        background: #eee;
+    }
 .comment-box {
     width: 100%;
     position: absolute;
     height: 40px;
     padding: 5px;
     box-sizing: border-box;
-    background: rgba(162, 162, 162, 0.6);
+    background: #0089ff;
     top: 408px;
     z-index: 999;
 
     .input-text {
-    height: 23px;
-    padding: 3px 10px;
-    width: 260px;
-    background: #efefef;
-    border: none;
+        height: 23px;
+        padding: 3px 5px;
+        border-bottom: 1px solid #efefef;
+        input {
+            height: 23px;
+            padding: 2px;
+            background: transparent;
+            border: none;
+            width: 250px;
+            color: #fff;
+        }
     }
     .icon {
         font-size: @font-xs;
+        color: #fff;
+    }
+    .close-commentbox {
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+            cursor: pointer;
     }
 }
