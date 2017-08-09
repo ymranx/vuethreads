@@ -53,7 +53,9 @@
 .comments {
     width: 100%;
     min-height: 30px;
+    max-height: 335px;
     font-size: @font-xs - 1;
+    overflow-y: auto;
     .comment {
         width: 100%;
         display: inline-block;
@@ -63,9 +65,14 @@
         color: @grey-color;
         background-color: @fb-bg;
         margin: 2px 0;
+        
+        .comments {
+            max-height: none;
+        }
         .comment {
             padding: 10px 0;
             margin: 0;
+            
         }
     }
     .comment-avatar {
@@ -84,7 +91,18 @@
     height: 40px;
     padding: 5px;
     box-sizing: border-box;
-    background: rgba(241, 241, 241, 0.62);
-    top: 406px;
+    background: rgba(162, 162, 162, 0.6);
+    top: 408px;
     z-index: 999;
+
+    .input-text {
+    height: 23px;
+    padding: 3px 10px;
+    width: 260px;
+    background: #efefef;
+    border: none;
+    }
+    .icon {
+        font-size: @font-xs;
+    }
 }

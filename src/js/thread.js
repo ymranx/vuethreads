@@ -41,7 +41,7 @@ export default {
                 "id": Math.round(Math.random() * 2000),
                 "text": "Hello I am santhosh 3",
                 "uid": "002",
-                "time": "sfsfsafs"
+                "time": Date.parse(new Date())
             }
             if (repid) {
                 var comm = this.getCommentById(repid);

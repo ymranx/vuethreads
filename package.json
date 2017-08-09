@@ -19,6 +19,7 @@
     "axios": "^0.16.1",
     "lowdb": "^0.16.2",
     "vue": "^2.4.2",
+    "vue-timeago": "^3.3.5",
     "ws": "^3.1.0"
   },
   "devDependencies": {

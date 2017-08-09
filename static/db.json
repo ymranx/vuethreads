@@ -14,19 +14,19 @@
   "thread": {
     "text": "Hello this is sample post",
     "uid": "001",
-    "time": "sfsfsafs",
+    "time": 1502256419000,
     "comments": [
       {
         "id": "1",
         "text": "Hi Whos there?",
         "uid": "001",
-        "time": "sfsfsafs",
+        "time": 1502256807000,
         "replies": [
           {
             "id": "2",
             "text": "Hello I am santhosh",
             "uid": "002",
-            "time": "sfsfsafs"
+            "time": 1502256805000
           }
         ]
       }

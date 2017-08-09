@@ -1,10 +1,12 @@
 <template>
   <div class="app-thread" v-if="json">
-    <div class="post-user" >
+    <div class="post-user">
       <img class="avatar" :src="getuserById(json.thread.uid).pic" />
       <span class="adetails">
         <div class="tuname uname">{{getuserById(json.thread.uid).uname}} </div>
-        <div class="ttime"> 13 hr ago</div>
+        <div class="ttime">
+          <timeago :since="1502256419000" :auto-update="60"></timeago>
+        </div>
       </span>
     </div>
     <div class="ttext"> {{json.thread.text}}
@@ -20,6 +22,7 @@
           <span class="comment-text">{{comment.text}} </span>
           <div>
             <a class="cmmnt-btn" @click="openReplyBox(comment.id)"> Reply </a>
+            <timeago :since="comment.time" :auto-update="60"></timeago>
           </div>
           <ul class="comments" v-if="comment.replies.length">
             <li v-for="reply in comment.replies" class="comment">
@@ -29,6 +32,7 @@
                 <span class="comment-text">{{reply.text}} </span>
                 <div>
                   <a class="cmmnt-btn" @click="openReplyBox(comment.id)"> Reply </a>
+                  <timeago :since="reply.time" :auto-update="60"></timeago>
                 </div>
               </div>
             </li>
@@ -36,9 +40,11 @@
         </div>
       </li>
     </ul>
-    <div class="comment-box"> 
-      <input tupe="text"/>
-      <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+    <div class="comment-box">
+      <span> </span>
+      <input type="text" class="input-text"/>
+      <i class="fa fa-paper-plane-o icon" aria-hidden="true"></i>
+      <i class="fa fa-times-circle icon" aria-hidden="true"></i>
     </div>
   </div>
 </template>
