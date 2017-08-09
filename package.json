@@ -4,10 +4,8 @@
   "description": "Facebook style comment thread in vue.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server  --colors --port 8080",
-    "devbuild": "webpack",
-    "prodbuild": "webpack --config webpack.prodconfig.js"
+    "devbuild": "webpack -p"
   },
   "keywords": [
     "comments",
@@ -17,10 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.1",
-    "lowdb": "^0.16.2",
     "vue": "^2.4.2",
-    "vue-timeago": "^3.3.5",
-    "ws": "^3.1.0"
+    "vue-timeago": "^3.3.5"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",

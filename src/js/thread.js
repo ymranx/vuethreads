@@ -1,3 +1,4 @@
+
 var users = {};
 var repId = null;
 
@@ -10,7 +11,7 @@ export default {
     props: ['json'],
 
     mounted: function () {
-
+        // console.log()
     },
     methods: {
         getuserById(uid) {
@@ -39,19 +40,6 @@ export default {
         },
 
         openReplyBox: function (repid) {
-            // var reply = {
-            //     "id": Math.round(Math.random() * 2000),
-            //     "text": "Hello I am santhosh 3",
-            //     "uid": "002",
-            //     "time": Date.parse(new Date())
-            // }
-            // if (repid) {
-            //     var comm = this.getCommentById(repid);
-            //     comm.replies.push(reply);
-            // } else {
-            //     reply.replies = [];
-            //     this.json.thread.comments.push(reply);
-            // }
             repId = repid;
             this.showCommentBox = true;
             this.$nextTick(() => {
@@ -64,7 +52,7 @@ export default {
             var ctext = $("#commentInput").val();
             if (ctext) {
                 var reply = {
-                    "id": Math.round(Math.random() * 2000),
+                    "id": "00" + Math.round(Math.random() * 2000),
                     "text": ctext,
                     "uid": "002",
                     "time": Date.parse(new Date())
@@ -76,11 +64,12 @@ export default {
                     reply.replies = [];
                     this.json.thread.comments.push(reply);
                 }
+                localStorage.setItem('threaddb', JSON.stringify(this.json));
                 this.showCommentBox = false;
             }
         },
         closeCommentBox() {
-            this.showCommentBox = false;    
+            this.showCommentBox = false;
         },
         btnClick: function (el, ev) {
             $("#commentInput").val("");

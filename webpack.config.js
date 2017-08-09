@@ -5,33 +5,19 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  // This is the "main" file which should include all other modules
+
   entry: {
     "vuecomments": './src/js/main.js'
   },
-  // Where should the compiled file go?
+
   output: {
-    // To the `dist` folder
-    // With the filename `build.js` so it's dist/build.js
+
     path: path.join(__dirname, 'dist'),
     filename: './js/[name].build.js'
   },
 
-  devServer: {
-    proxy: {
-      "/rest/**": {
-        target: "https://echo.websocket.org",
-        pathRewrite: {
-          "^/socket": ""
-        },
-        changeOrigin: true,
-        secure: false
-      }
-    }
-  },
-
   module: {
-    // Special compilation rules
+
     rules: [
       {
         test: /\.js$/,
