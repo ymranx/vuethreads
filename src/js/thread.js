@@ -68,12 +68,9 @@ export default {
                 this.showCommentBox = false;
             }
         },
+        
         closeCommentBox() {
             this.showCommentBox = false;
-        },
-        btnClick: function (el, ev) {
-            $("#commentInput").val("");
-            console.log(el);
         }
     }
 }
