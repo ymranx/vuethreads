@@ -25,6 +25,11 @@ $ npm run devbuild;
 ```
 built files are exported to 'dist' folder
 
+### Demo
+
+[https://ymranx.github.io/index.html](https://ymranx.github.io/index.html)
+
+
 > P.S : As it is backend less project, data will be retained in localStorage
 
 License
