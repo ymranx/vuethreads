@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "uname": "Abhijit Kumar",
+      "uid": "001",
+      "pic": "/static/user1.png"
+    },
+    {
+      "uname": "Santhosh",
+      "uid": "002",
+      "pic": "/static/user2.png"
+    }
+  ],
+  "thread": {
+    "text": "Register your favorite .com today for just Rs 99* /1st year with 2-year purchase.",
+    "uid": "001",
+    "time": 1502256419000,
+    "comments": [
+      {
+        "id": "1",
+        "text": "Hi, how to get this offer?",
+        "uid": "002",
+        "time": 1502256807000,
+        "replies": [
+          {
+            "id": "2",
+            "text": "Hello Santhosh please visit our FB page.",
+            "uid": "001",
+            "time": 1502256805000
+          }
+        ]
+      }
+    ]
+  }
+}
